@@ -36,7 +36,6 @@ async function run() {
             res.send(result)
           })
 
-
           app.get('/complete/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) }
@@ -51,8 +50,6 @@ async function run() {
             const result = await servicesCollection.findOne(query);
             res.send(result)
           })
-
-
 
          // all service data load kora display te
          app.get('/services', async (req, res) => {
