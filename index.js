@@ -12,8 +12,6 @@ const app = express()
 // }));
 
 
-
-
 //modeleware
 app.use(cors());
 app.use(express.json());
@@ -37,12 +35,12 @@ async function run() {
 
         })
 
-        app.delete('/complete/:id', async (req, res) => {
-            const id = req.params.id;
-            const query = { _id: ObjectId(id) }
-            const result = await completeCollection.deleteOne(query);
-            res.send(result)
-          })
+        // app.delete('/complete/:id', async (req, res) => {
+        //     const id = req.params.id;
+        //     const query = { _id: ObjectId(id) }
+        //     const result = await completeCollection.deleteOne(query);
+        //     res.send(result)
+        //   })
 
           app.get('/complete/:id', async (req, res) => {
             const id = req.params.id;
