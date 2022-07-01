@@ -6,6 +6,14 @@ const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const port = process.env.POST || 5000;
 const app = express()
 
+
+// app.use(cors({
+// origin: "*"
+// }));
+
+
+
+
 //modeleware
 app.use(cors());
 app.use(express.json());
